@@ -11,12 +11,18 @@
             <h2>Dice Game</h2>
         </header>
         <main>
-        <button onclick="getElementById('playerDice').innerHTML=rollDice()">Roll Dice</button>
+        <button id ="rollButton">Roll Dice</button>
             <div id="rolls">
                 <p id="playerDice">Player rolls</p>
                 <p id="computerDice">Computer rolls</p>
+                <p id="playerTotal"></p>
+                <p id="computerTotal"></p>
+                <h3 id="winner"></h3>
+                <p id="playerScore">Player Score: </p>
+                <p id="computerScore">Computer Score: </p>
             </div>
         </main>
+        <footer></footer>
         <script src="script.js"></script>
     </body>
 </html>

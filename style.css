@@ -1,9 +1,10 @@
 body {
-    font-family:Arial, Helvetica, sans-serif
+    font-family: "Skranji", serif;
+    font-size: 25px;
 }
 
 header {
-    font-family: Arial;
+    font-family:  "Skranji", serif;
     padding: 10px;
     text-align: center;
 }
@@ -15,25 +16,38 @@ div {
     padding: 200px;
   }
 
-button {
-    margin: auto;
-    background-color: #04AA6D; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
+  button {
+    padding: 15px 25px;
+    font-size: 45px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 100px;
-    border: 3px solid green;
-    padding: 10px;
-    margin: 0;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #000000;
     position: absolute;
+    top: 70%;
+    right: 40%;
+  }
+  
+  button:hover {background-color: #3e8e41}
+  
+  button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+p:first-child {
+    text-align: right;
+    position: fixed;
     top: 50%;
-    right: 45%;
 }
 
-p {
-    text-align: center;
+p:second-child {
+    text-align: left;
+    position: fixed;
+    top: 100%;
 }
