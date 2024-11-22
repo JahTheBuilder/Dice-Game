@@ -1,6 +1,7 @@
 body {
     font-family: "Skranji", serif;
     font-size: 25px;
+    font-weight: normal;
 }
 
 header {
@@ -16,6 +17,7 @@ div {
     padding: 200px;
   }
 
+  /********* button to roll the dice **********/
   button {
     padding: 15px 25px;
     font-size: 45px;
@@ -32,6 +34,7 @@ div {
     right: 40%;
   }
   
+  /********* the button is animated when pressed **********/
   button:hover {background-color: #3e8e41}
   
   button:active {
@@ -40,14 +43,10 @@ div {
     transform: translateY(4px);
   }
 
+  
 p:first-child {
     text-align: right;
     position: fixed;
     top: 50%;
-}
 
-p:second-child {
-    text-align: left;
-    position: fixed;
-    top: 100%;
 }

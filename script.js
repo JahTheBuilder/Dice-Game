@@ -4,8 +4,8 @@ let computerRoll1 = 0;
 let computerRoll2 = 0;
 let playerTotal = 0;
 let computerTotal = 0;
-// let playerScore = 0;
-// let computerScore = 0;
+let playerScore = 0;
+let computerScore = 0;
 
 // displayRolls();
 
@@ -18,7 +18,7 @@ function displayRolls() {
 
 document.getElementById("rollButton").addEventListener("click", rollDice);
 
-
+/********* function to keepp playing rounds **********/
 function playRound() {
     rollDice();
     displayRolls();
@@ -42,31 +42,40 @@ function rollDice() {
     displayScores();
 }
 
-// /********* function to calculate the result, determine winner, and update the score **********/ */
+/********* function to calculate the result, determine winner, and update the score **********/ */
 function calculateScore() {
     playerTotal = playerRoll1 + playerRoll2;
     computerTotal = computerRoll1 + computerRoll2;
 }
 
+/********* function to display the results **********/
 function displayResults() {
-    document.getElementById("playerTotal").innerHTML = `Player rolled a ${playerTotal}`;
-    document.getElementById("computerTotal").innerHTML = `Computer rolled a ${computerTotal}`;
+
+    document.getElementById("computerTotal").innerHTML = `Computer scored a ${computerTotal}`;
+   
 }
 
+/********* function to determine the winner **********/
 function determineWinner() {
     if (playerTotal > computerTotal) {
         document.getElementById("winner").innerHTML = `Player Wins!!!!`;
         playerScore += 1;
     } else if (playerTotal < computerTotal) {
-        document.getElementById("winner").innerHTML = `Player Wins!!!!`;
-    } else if (playerTotal === computerTotal) {
-        document.getElementById("winner").innerHTML = `Player Wins!!!!`;
-    } else {
         document.getElementById("winner").innerHTML = `Computer Wins!!!!`;
+    } else if (playerTotal === computerTotal) {
+        document.getElementById("winner").innerHTML = `Computer Wins!!!!`;
+    } else {
+        document.getElementById("winner").innerHTML = `Player Wins!!!!`;
     } 
 }
 
-function displayScore() {
+/********* function to display scores of player and computer **********/
+function displayScores() {
 
+    document.getElementById("playerScore").innerHTML = `Player scored a ${playerTotal}`;
+
+    calculateScore();
+    displayResults();
+    displayScores();
 
 }
