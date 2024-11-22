@@ -42,7 +42,7 @@ function rollDice() {
     displayScores();
 }
 
-/********* function to calculate the result, determine winner, and update the score **********/ */
+/********* function to calculate the result, determine winner, and update the score **********/
 function calculateScore() {
     playerTotal = playerRoll1 + playerRoll2;
     computerTotal = computerRoll1 + computerRoll2;
