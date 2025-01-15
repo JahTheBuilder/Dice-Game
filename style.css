@@ -1,52 +1,37 @@
 body {
-    font-family: "Skranji", serif;
-    font-size: 25px;
-    font-weight: normal;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  user-select: 
 }
 
-header {
-    font-family:  "Skranji", serif;
-    padding: 10px;
-    text-align: center;
+.main {
+  display: flex;
+  gap: 200px;
 }
 
-div {
-    margin: auto;
-    width: 50%;
-    border: 3px solid green;
-    padding: 200px;
-  }
+.left h3 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 
+}
 
-  /********* button to roll the dice **********/
-  button {
-    padding: 15px 25px;
-    font-size: 45px;
-    text-align: center;
-    cursor: pointer;
-    outline: none;
-    color: #fff;
-    background-color: #04AA6D;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #000000;
-    position: absolute;
-    top: 70%;
-    right: 42%;
-  }
-  
-  /********* the button is animated when pressed **********/
-  button:hover {background-color: #3e8e41}
-  
-  button:active {
-    background-color: #3e8e41;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-  }
+.donut-image {
+  width: 300px;
+}
 
-  
-p:first-child {
-    text-align: right;
-    position: fixed;
-    top: 54%;
+.donut-image:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
 
+.donut-image:active {
+  opacity: 0.8;
+  transform: scale(1.02)
+}
+
+.uprade-img {
+  width: 55px;
 }
