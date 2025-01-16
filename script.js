@@ -1,20 +1,17 @@
 let donut = document.querySelector('.donut-cost')
+let parsedDonut = parseFloat(donut.innerHTML)
 
 let clickerCost = document.querySelector('.clicker-cost')
-
-let gps = 0
+let parsedClickerCost = parseFloat(clickerCost.innerHTML)
 
 function incrementDonut() {
-    donut.innerHTML = parseFloat(donut.innerHTML) + 1
+    parsedDonut += 1
+    donut.innerHTML = parsedDonut
 }
 
 function buyClicker() {
-    if (donut.innerHTML >= clickerCost.innerHTML) {
-        donut.innerHTML -= clickerCost.innerHTML
-        gps += 1
+    if (parsedDonut >= parsedClickerCost) {
+        parsedDonut -= parsedClickerCost
+        donut.innerHTML = parsedDonut
     }
 }
-
-setInterval(() => {
-    donut.innerHTML = parseFloat(donut.innerHTML) + gps 
-}, 1000)
