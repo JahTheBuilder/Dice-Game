@@ -58,30 +58,7 @@ function buyPickaxe() {
     }
 }
 
-function buyMiner() {
-    if (parsedDonut >= parsedMinerCost) {
-        donut.innerHTML = Math.round(parsedDonut -= parsedMinerCost);
-        
-        minerLevel.innerHTML ++
-
-        parsedMinerIncrease = parseFloat((parsedMinerIncrease * 1.03).toFixed(2))
-        minerIncrease.innerHTML = parsedMinerIncrease
-        gps += parsedMinerIncrease
-
-        parsedMinerCost *- 1.18;
-        minerCost.innerHTML = Math.random(parsedMinerCost)
-    }
-}
-
-
 setInterval(() => {
     parsedDonut += gps / 10
     donut.innerHTML = Math.round(parsedDonut)
 }, 100)
-
-setInterval(() => {
-    parsedDonut += gpc / 10
-    donut.innerHTML = Math.round(parsedDonut)
-}, 100)
-
-
