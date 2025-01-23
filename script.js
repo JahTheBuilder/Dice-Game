@@ -8,12 +8,20 @@ let clickerIncrease = document.querySelector(".clicker-increase")
 let parsedClickerIncrease = parseFloat(clickerIncrease.innerHTML)
 
 let pickaxeCost = document.querySelector('.pickaxe-cost')
-let parsedPickaxeCost = parseFloat(PickaxeCost.innerHTML)
+let parsedPickaxeCost = parseFloat(pickaxeCost.innerHTML)
 let pickaxeLevel = document.querySelector(".pickaxe-level")
 let pickaxeIncrease = document.querySelector(".pickaxe-increase")
 let parsedPickaxeIncrease = parseFloat(pickaxeIncrease.innerHTML)
 
+let minerCost = document.querySelector('.miner-cost')
+let parsedMinerCost = document.querySelector(minerCost.innerHTML)
+let minerLevel = document.querySelector(".miner-level")
+let minerIncrease = document.querySelector(".miner-increase")
+let parsedMinerIncrease = parseFloat(minerIncrease.innerHTML)
+
 let gpc = 1;
+
+let gps = 0;
 
 function incrementDonut() {
     parsedDonut += gpc;
@@ -26,7 +34,7 @@ function buyClicker() {
 
         clickerLevel.innerHTML ++
 
-        parsedClickerIncrease = parseFloat(parsedClickerIncrease * 1.03).toFixed(2)
+        parsedClickerIncrease = parseFloat((parsedClickerIncrease * 1.03).toFixed(2))
         clickerIncrease.innerHTML = parsedClickerIncrease
         gpc += parsedClickerIncrease
 
@@ -35,18 +43,45 @@ function buyClicker() {
     }
 }
 
-
-function buyClicker() {
-    if  (parsedDonut >= parsedPickaxeCost) {
+function buyPickaxe() {
+    if (parsedDonut >= parsedPickaxeCost) {
         donut.innerHTML = Math.round(parsedDonut -= parsedPickaxeCost);
 
         pickaxeLevel.innerHTML ++
 
-        parsedPickaxeIncrease = parseFloat(parsedPickaxeIncrease * 1.03).toFixed(2)
+        parsedPickaxeIncrease = parseFloat((parsedPickaxeIncrease * 1.03).toFixed(2))
         pickaxeIncrease.innerHTML = parsedPickaxeIncrease
-        gpc += parsedPickaxeIncrease
+        gps += parsedPickaxeIncrease
 
         parsedPickaxeCost *- 1.18;
-        PickaxeCost.innerHTML = Math.random(parsedPickaxeCost)
+        pickaxeCost.innerHTML = Math.random(parsedPickaxeCost)
     }
 }
+
+function buyMiner() {
+    if (parsedDonut >= parsedMinerCost) {
+        donut.innerHTML = Math.round(parsedDonut -= parsedMinerCost);
+        
+        minerLevel.innerHTML ++
+
+        parsedMinerIncrease = parseFloat((parsedMinerIncrease * 1.03).toFixed(2))
+        minerIncrease.innerHTML = parsedMinerIncrease
+        gps += parsedMinerIncrease
+
+        parsedMinerCost *- 1.18;
+        minerCost.innerHTML = Math.random(parsedMinerCost)
+    }
+}
+
+
+setInterval(() => {
+    parsedDonut += gps / 10
+    donut.innerHTML = Math.round(parsedDonut)
+}, 100)
+
+setInterval(() => {
+    parsedDonut += gpc / 10
+    donut.innerHTML = Math.round(parsedDonut)
+}, 100)
+
+
