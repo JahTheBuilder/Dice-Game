@@ -7,6 +7,7 @@ body {
     background-color: #2C2C2C;
     color: white;
     user-select: none;
+    font-family: "Skranji", serif;
 }
 
 .main {
@@ -21,7 +22,7 @@ body {
 }
 
 .donut-image {
-    width: 300px;
+    width: 500px;
 }
 
 .donut-image:hover {
@@ -89,4 +90,24 @@ body {
 
 .upgrade:hover .next-level-info {
     display: block;
+}
+
+.statistics {
+    position: absolute;
+    bottom: 0;
+    width: 400px;
+    padding: 30px;
+    border: 2px white solid;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    left: 50%
+    transform: translate(-50%);
+}
+
+.texts {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 22px;
 }
