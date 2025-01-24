@@ -15,24 +15,19 @@ body {
     gap: 200px;
 }
 
-.left h3 {
+.left h3{
     text-align: center;
     font-size: 30px;
     margin-bottom: 50px;
 }
 
-.donut-image {
-    width: 500px;
+.burger-image{
+    width: 200px;
 }
 
-.donut-image:hover {
-    opacity: 0.9;
-    cursor: pointer;
-}
-
-.donut-image:active {
+.burger-image:hover {
     opacity: 0.8;
-    transform: scale(1.02)
+    cursor: pointer;
 }
 
 .upgrade {
@@ -57,11 +52,10 @@ body {
     width: 55px;
 }
 
-.donut-img {
+.burger-img {
     width: 20px;
     height: 20px;
 }
-
 .mid-section h4 {
     margin: 0;
     margin-bottom: 20px;
@@ -90,24 +84,4 @@ body {
 
 .upgrade:hover .next-level-info {
     display: block;
-}
-
-.statistics {
-    position: absolute;
-    bottom: 0;
-    width: 400px;
-    padding: 30px;
-    border: 2px white solid;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-    left: 50%
-    transform: translate(-50%);
-}
-
-.texts {
-    display: flex;
-    gap: 100px;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 22px;
 }
