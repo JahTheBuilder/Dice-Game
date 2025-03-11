@@ -1,21 +1,25 @@
-let ice = document.querySelector(".ice-cost")
-let parsedIce = parseFloat("ice.innerHTML")
+let ice = document.querySelector(".ice-cost");
+let parsedIce = parseFloat("ice.innerHTML");
 
-let clickerCost = document.querySelector(".clicker-cost")
-let parsedClickerCost = parseFloat(clickerCost.innerHTML)
-let clickerLevel = document.querySelector(".clicker-level")
-let clickerIncrease = document.querySelector(".clicker-increase")
-let parsedClickerIncrease = parseFloat(clickerIncrease.innerHTML)
+let clickerCost = document.querySelector('.clicker-cost');
+let parsedClickerCost = parseFloat(clickerCost.innerHTML);
+let clickerLevel = document.querySelector(".clicker-level");
+let clickerIncrease = document.querySelector(".clicker-increase");
+let parsedClickerIncrease = parseFloat(clickerIncrease.innerHTML);
 
-let pickaxeCost = document.querySelector(".pickaxe-cost")
-let parsedPickaxeCost = parseFloat(pickaxeCost.innerHTML)
-let pickaxeLevel = document.querySelector(".pickaxe-level")
-let pickaxeIncrease = document.querySelector(".pickaxe-increase")
-let parsedPickaxeIncrease = parseFloat(pickaxeIncrease.innerHTML)
+let pickaxeCost = document.querySelector('.pickaxe-cost');
+let parsedPickaxeCost = parseFloat(pickaxeCost.innerHTML);
+let pickaxeLevel = document.querySelector(".pickaxe-level");
+let pickaxeIncrease = document.querySelector(".pickaxe-increase");
+let parsedPickaxeIncrease = parseFloat(pickaxeIncrease.innerHTML);
+
+let minerCost = document.querySelector('.miner-cost');
+let parsedMinerCost = document.querySelector(minerCost.innerHTML);
+let minerLevel = document.querySelector(".miner-level");
+let minerIncrease = document.querySelector(".miner-increase");
+let parsedMinerIncrease = parseFloat(minerIncrease.innerHTML);
 
 let gpc = 1;
-
-let gps = 0;
 
 function incrementIce() {
     ice.innerHTML = Math.round(parsedIce += gpc);
@@ -36,17 +40,4 @@ function buyClicker() {
     }
 }
 
-function buyPickaxe() {
-    if  (parsedIce >= parsedPickaxeCost) {
-        ice.innerHTML = Math.round(parsedIce -= parsedPickaxeCost);
 
-        pickaxeLevel.innerHTML ++
-
-        parsedPickaxeIncrease = parseFloat((parsedPickaxeIncrease * 1.03).toFixed(2))
-        pickaxeIncrease.innerHTML = parsedPickaxeIncrease
-        gpc += parsedPickaxeIncrease
-
-        parsedPickaxeCost *= 1.18;
-        pickaxeCost.innerHTML = Math.round(parsedPickaxeCost)
-    }
-}
